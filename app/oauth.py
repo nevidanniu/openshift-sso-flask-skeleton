@@ -69,7 +69,7 @@ class OpenshiftSignIn(OAuthSignIn):
 
         )
         me = oauth_session.get('apis/user.openshift.io/v1/users/~').json()
-        test = oauth_session.post("apis/authorization.openshift.io/v1/subjectaccessreviews", '{"namespace":"monitoring","resource":"services","verb":"list", "scopes": ["user:full"]}')
+        test = oauth_session.post("apis/authorization.openshift.io/v1/subjectaccessreviews", '{"namespace":"example","resource":"services","verb":"list", "scopes": ["user:full"]}')
         return (
             me['metadata']['uid'],
             me['metadata']['name'],
