@@ -39,9 +39,9 @@ class OpenshiftSignIn(OAuthSignIn):
             name='openshift',
             client_id=self.consumer_id,
             client_secret=self.consumer_secret,
-            authorize_url='https://api.openshift.local:8443/oauth/authorize',
-            access_token_url='https://api.openshift.local:8443/oauth/token',
-            base_url='https://api.openshift.local:8443/'
+            authorize_url=current_app.config['AUTHORIZE_URL'],
+            access_token_url=current_app.config['ACCESS_TOKEN_URL'],
+            base_url=current_app.config['BASE_URL']
         )
 
     def authorize(self):
