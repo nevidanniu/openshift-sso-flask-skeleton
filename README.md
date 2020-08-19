@@ -15,7 +15,7 @@ metadata:
   annotations:
     serviceaccounts.openshift.io/oauth-redirectreference.primary: '{"kind":"OAuthRedirectReference","apiVersion":"v1","reference":{"kind":"Route","name":"oauth-demo"}}'
   name: oauth-demo
-  namespace: ci-examples
+  namespace: examples
 ``` 
 
 get token:
